@@ -37,4 +37,31 @@ public class O1_ValidParanthesisString {
         if(!st.isEmpty()) return false; 
         return true ; 
     }
+    // using recursion 
+    public boolean isBalanced(String s) {
+        if(s.isEmpty()) return true ; 
+        if(s.length() % 2 != 0) return false ; 
+        
+        char open = s.charAt(0); 
+        char close ;
+        if(open == '(') close = ')'; 
+        else if(open == '[') close = ']'; 
+        else if(open == '{') close = '}'; 
+        else return false; 
+        
+        int balance = 0 ; 
+        for(int i = 0 ; i < s.length() ; i++){
+            char ch = s.charAt(i);
+            if(ch == open){
+                balance ++; 
+            }
+            else if(ch == close){
+                balance -- ; 
+            }
+            if(balance == 0){
+                return isBalanced(s.substring(1 , i)) && (isBalanced(s.substring(i + 1)));
+            }
+        }
+        return false; 
+    }
 }
