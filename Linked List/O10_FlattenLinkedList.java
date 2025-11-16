@@ -9,36 +9,34 @@ public class O10_FlattenLinkedList {
             this.bottom = null;
         }
     }
-    Node merge(Node a , Node b){
+    public Node merge(Node t1 , Node t2){
         Node d = new Node(-1); 
-        Node temp = d ; 
-        if(a == null) return b ; 
-        if(b == null) return a; 
-        while(a != null && b != null){
-            if(a.data < b.data){
-                temp.bottom = a ; 
-                temp = a ; 
-                a = a.bottom; 
+        Node temp = d; 
+        if(t1 == null) return t2 ; 
+        if(t2 == null) return t1; 
+        while(t1 != null && t2 != null){
+            if(t1.data < t2.data){
+                temp.bottom = t1 ; 
+                t1 = t1.bottom ; 
             }
-            else {
-                temp.bottom = b ;
-                temp = b ; 
-                b = b.bottom ; 
+            else{
+                temp.bottom = t2 ; 
+                t2 = t2.bottom; 
             }
+            temp = temp.bottom ;
             temp.next = null; 
         }
-        if(a != null){
-            temp.bottom = a ;  
+        if(t1 != null){
+            temp.bottom = t1 ; 
         }
-        if(b != null){
-            temp.bottom = b ; 
-        }
-        d.bottom.next = null ; 
-        return d.bottom ; 
+        if(t2 != null){
+            temp.bottom = t2 ; 
+        } 
+        return d.bottom ;
     }
-    Node flatten(Node head) {
-        if(head == null || head.next == null) return head;
-        head.next = flatten(head.next); 
+    public Node flatten(Node head) {
+        if(head == null || head.next == null) return head ;
+        head.next = flatten(head.next);
         return merge(head , head.next); 
     }
 }
