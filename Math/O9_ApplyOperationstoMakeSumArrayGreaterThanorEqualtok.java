@@ -1,4 +1,3 @@
-package Math;
 
 public class O9_ApplyOperationstoMakeSumArrayGreaterThanorEqualtok {
     public int minOperations(int k) {

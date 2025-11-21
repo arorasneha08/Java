@@ -1,4 +1,3 @@
-package Math;
 
 public class O16_NumSubstringsWithOnlyOnes {
     public int numSub(String s) {

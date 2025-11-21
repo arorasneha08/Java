@@ -1,4 +1,3 @@
-package Math;
 
 public class O2_ExcelSheetColNumber {
     public int titleToNumber(String str) {

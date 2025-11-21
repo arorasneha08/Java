@@ -1,4 +1,4 @@
-package Math ; 
+
 import java.util.*;
 
 public class O12_HappyNumber {

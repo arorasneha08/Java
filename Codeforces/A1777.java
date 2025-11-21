@@ -22,5 +22,6 @@ public class A1777 {
             op = n - seg - 1;
             System.out.println(op); 
         }
+        sc.close();
     }
 }

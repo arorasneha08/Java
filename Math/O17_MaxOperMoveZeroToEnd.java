@@ -1,4 +1,3 @@
-package Math;
 
 public class O17_MaxOperMoveZeroToEnd {
     public int maxOperations(String s) {

@@ -1,4 +1,3 @@
-package Math;
 
 public class O6_WaterBottleII {
     public int maxBottlesDrunk(int numBottles, int numExchange) {

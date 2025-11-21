@@ -1,4 +1,3 @@
-package Math;
 
 public class O10_RobotBounded {
     public boolean isRobotBounded(String str) {

@@ -1,4 +1,3 @@
-package Math;
 
 public class O16_MinOperationToMakeAllOnes {
     private int gcd(int x, int y) {

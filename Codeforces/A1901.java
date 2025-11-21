@@ -27,5 +27,6 @@ public class A1901 {
             }
             System.out.println(max);
         }
+        sc.close();
     }
 }

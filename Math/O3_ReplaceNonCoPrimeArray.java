@@ -1,4 +1,3 @@
-package Math ; 
 import java.util.*;
 
 public class O3_ReplaceNonCoPrimeArray {

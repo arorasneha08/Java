@@ -1,4 +1,3 @@
-package Math;
 
 public class O4_CountGoodNumbers {
     int mod = (int) 1e9 + 7 ; 

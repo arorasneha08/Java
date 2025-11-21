@@ -1,4 +1,3 @@
-package Math ; 
 
 public class O7_VowelAllSubstring {
     private boolean isVowel(char ch){

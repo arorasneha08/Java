@@ -1,4 +1,3 @@
-package Math;
 
 public class O15_NumberOfLaserBeams {
     private int countOnes(String str){

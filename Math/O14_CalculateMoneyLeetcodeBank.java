@@ -1,4 +1,3 @@
-package Math ; 
 
 public class O14_CalculateMoneyLeetcodeBank {
     public int totalMoney(int n) {

@@ -1,5 +1,3 @@
-package Math;
-
 public class O1_ExcelSheetColTitle {
     public String convertToTitle(int columnNumber) {
         StringBuilder res = new StringBuilder(); 

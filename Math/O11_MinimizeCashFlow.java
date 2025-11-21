@@ -1,4 +1,3 @@
-package Math;
 
 public class O11_MinimizeCashFlow {
     static int getMax(int[] arr) {

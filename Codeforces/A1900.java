@@ -28,5 +28,6 @@ public class A1900 {
                 System.out.println(op);
             }
         }
+        sc.close();
     }
 }

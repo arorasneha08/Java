@@ -1,4 +1,3 @@
-package Math ; 
 
 public class O13_NextNumericallyBalancedNumber {
     private static boolean isBalanced(int num) {

@@ -15,5 +15,6 @@ public class A1899 {
                 System.out.println("First");
             }
         }
+        sc.close();
     }
 }

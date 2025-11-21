@@ -16,5 +16,6 @@ public class A1814 {
                 System.out.println("NO");
             }
         }
+        sc.close();
     }
 }

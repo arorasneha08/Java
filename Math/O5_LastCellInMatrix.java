@@ -1,4 +1,3 @@
-package Math;
 
 public class O5_LastCellInMatrix {
     static int[] endPoints(int[][] matrix, int R, int C) {
