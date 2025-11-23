@@ -1,5 +1,4 @@
 public class DP_WaysToTileFloor {
-    private int mod = (int) 1e9 + 7 ; 
     public int numberOfWays(int n) {
         if (n <= 1) return 1;
         if (n == 2) return 2;

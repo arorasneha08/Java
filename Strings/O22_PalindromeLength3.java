@@ -1,3 +1,4 @@
+package Strings ; 
 import java.util.HashSet;
 
 class O22_PalindromeLength3 {
