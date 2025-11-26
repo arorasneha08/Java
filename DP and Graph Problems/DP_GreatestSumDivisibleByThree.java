@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class Graph_GreatestSumDivisibleByThree {
+public class DP_GreatestSumDivisibleByThree {
     private int func(int idx, int sum, int[] arr, int[][] dp, int n) {
         if (idx == n) {
             return (sum % 3 == 0) ? 0 : Integer.MIN_VALUE;

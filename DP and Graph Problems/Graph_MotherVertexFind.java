@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class Graph_MotherVertexFind {
-    private void dfs(int node , int visited[],ArrayList<ArrayList<Integer>> adj){
+    private void dfs(int node , int visited[], ArrayList<ArrayList<Integer>> adj){
         visited[node] = 1; 
         
         for(int adjNode: adj.get(node)){
