@@ -10,19 +10,23 @@ public class A1866 {
         for(int i = 0 ; i < n ; i++){
             arr[i] = sc.nextInt() ;
         }
-        int minNeg = Integer.MAX_VALUE ;
+        int maxNeg = Integer.MIN_VALUE ;
         int minPos = Integer.MAX_VALUE ; 
         for(int i = 0 ; i < n ; i++){
             if(arr[i] > 0){
                 minPos = Math.min(minPos , arr[i]); 
             }
             else{
-                minNeg = Math.min(minNeg , arr[i]); 
+                maxNeg = Math.max(maxNeg , arr[i]); 
             }
         }
-        int abs1 = Math.abs(0 - minPos); 
-        int abs2 = Math.abs(minPos - 0); 
-        int ans = Math.min(abs1 , abs2); 
+        int ans = Integer.MAX_VALUE ; 
+        if(minPos != Integer.MAX_VALUE){
+            ans = Math.min(ans , minPos); 
+        }
+        if(maxNeg != Integer.MIN_VALUE){
+            ans = Math.min(ans , Math.abs(maxNeg));
+        }
         System.out.println(ans); 
         sc.close();
     }
