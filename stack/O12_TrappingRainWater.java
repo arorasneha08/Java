@@ -1,4 +1,4 @@
-public class TrappingRainWater {
+public class O12_TrappingRainWater {
     public int trap(int[] arr) {
         int n = arr.length ;
         int left[] = new int[n]; 
