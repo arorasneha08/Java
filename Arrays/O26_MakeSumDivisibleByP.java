@@ -1,3 +1,6 @@
+package Arrays ; 
+import java.util.HashMap;
+
 public class O26_MakeSumDivisibleByP{
     public int minSubarray(int[] arr , int p) {
         int n = arr.length ; 
