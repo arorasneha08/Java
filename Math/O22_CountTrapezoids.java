@@ -1,6 +1,7 @@
+import java.util.*;
+
 public class O22_CountTrapezoids{
     public int countTrapezoids(int[][] mat) {
-        int n = mat.length; 
         int mod = (int) 1e9+7 ; 
         HashMap<Integer , Integer> mpp = new HashMap<>(); 
         for(int p[] : mat){
