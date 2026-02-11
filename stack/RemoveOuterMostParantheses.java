@@ -1,27 +1,21 @@
-import java.util.Stack;
-
 public class RemoveOuterMostParantheses {
     public String removeOuterParentheses(String s) {
-        int n = s.length();
-        Stack<Character> st = new Stack<>();
-        int balance = 0 ;
-        String res = "" ;
+        int n = s.length(); 
+        if(n <= 2) return ""; 
+        char c[] = s.toCharArray(); 
+        StringBuilder str = new StringBuilder(); 
+        int open = 1 ; 
 
-        for(int i = 0 ; i < n ; i++){
-            char ch = s.charAt(i); 
-            if(ch == '('){
-                if(balance > 0){
-                    res += ch ; 
-                }
-                balance ++; 
+        for(int i = 1 ; i < n ; i++){
+            if(c[i] == '('){
+                open ++; 
+                if(open > 1) str.append('('); 
             }
             else{
-                balance -- ; 
-                if(balance > 0){
-                    res += ch ; 
-                }
+                if(open > 1) str.append(')'); 
+                open --; 
             }
         }
-        return res; 
+        return str.toString(); 
     }
 }

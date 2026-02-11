@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class O5_DirectedGrapgCycle {
+public class O5_DirectedGraphCycle {
     private boolean dfs(int node , List<List<Integer>> adj , int visited[] , int pathVisited[]){
         visited[node] = 1; 
         pathVisited[node] = 1;  

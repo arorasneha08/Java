@@ -1,6 +1,6 @@
 package Strings;
 
-public class O17_LongestPalindromicSubsequences {
+public class O17_LongestPalindromicSubstring {
     private String func(int left , int right , String s){
         while(left >= 0 && right < s.length() && s.charAt(left) == s.charAt(right)){
             left -- ; 

@@ -1,38 +1,64 @@
-import java.util.HashMap;
+// import java.util.HashMap;
+// import java.util.Map;
 
-public class O5_ConstructInorderPostorder {
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-        TreeNode() {}
-        TreeNode(int val) {
-            this.val = val;
-        }
-        TreeNode(int val, TreeNode left, TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
-    }
-    private TreeNode func(int pstart , int pend , int instart , int inend , int inorder[] 
-    , int postorder [] , HashMap<Integer , Integer> mpp){
+// public class O5_ConstructInorderPostorder {
+//     // public class TreeNode {
+//     //     int val;
+//     //     TreeNode left;
+//     //     TreeNode right;
+//     //     TreeNode() {}
+//     //     TreeNode(int val) {
+//     //         this.val = val;
+//     //     }
+//     //     TreeNode(int val, TreeNode left, TreeNode right) {
+//     //         this.val = val;
+//     //         this.left = left;
+//     //         this.right = right;
+//     //     }
+//     // }
+//     // private TreeNode func(int pstart , int pend , int instart , int inend , int inorder[] 
+//     // , int postorder [] , HashMap<Integer , Integer> mpp){
 
-        if(pstart > pend || instart > inend)  return null; 
-        TreeNode root = new TreeNode(postorder[pend]);  
-        int inroot = mpp.get(postorder[pend]); 
-        int numsLeft = inroot - instart ; 
+//     //     if(pstart > pend || instart > inend)  return null; 
+//     //     TreeNode root = new TreeNode(postorder[pend]);  
+//     //     int inroot = mpp.get(postorder[pend]); 
+//     //     int numsLeft = inroot - instart ; 
 
-        root.left = func(pstart, pstart + numsLeft - 1 , instart , inroot , inorder ,postorder , mpp);
-        root.right = func(pstart + numsLeft, pend-1  , inroot + 1 , inend , inorder , postorder , mpp);
+//     //     root.left = func(pstart, pstart + numsLeft - 1 , instart , inroot , inorder ,postorder , mpp);
+//     //     root.right = func(pstart + numsLeft, pend-1  , inroot + 1 , inend , inorder , postorder , mpp);
 
-        return root ; 
-    }
-    public TreeNode buildTree(int[] inorder, int[] postorder) {
-        HashMap<Integer , Integer> mpp = new HashMap<>(); 
-        for(int i = 0 ; i < inorder.length ; i++){
-            mpp.put(inorder[i] , i) ;
-        }
-        return func(0, postorder.length-1 , 0 , inorder.length-1 , inorder ,postorder , mpp); 
-    }
-}
+//     //     return root ; 
+//     // }
+//     // public TreeNode buildTree(int[] inorder, int[] postorder) {
+//     //     HashMap<Integer , Integer> mpp = new HashMap<>(); 
+//     //     for(int i = 0 ; i < inorder.length ; i++){
+//     //         mpp.put(inorder[i] , i) ;
+//     //     }
+//     //     return func(0, postorder.length-1 , 0 , inorder.length-1 , inorder ,postorder , mpp); 
+//     // }
+
+
+//     // best apprach  :- 
+//     static int idx ;
+//     private static Node createTree(int postorder[] , int start , int end , Map<Integer , Integer> mpp){
+//         if(start > end) return null; 
+//         int val = postorder[idx--]; 
+//         Node root = new Node(val); 
+//         if(start == end) return root; 
+        
+//         int rootIdx = mpp.get(val); 
+//         root.right = createTree(postorder , rootIdx + 1 , end , mpp); 
+//         root.left = createTree(postorder , start , rootIdx - 1 , mpp); 
+        
+//         return root; 
+//     }
+//     Node buildTree(int[] inorder, int[] postorder) {
+//         int n = inorder.length ; 
+//         HashMap<Integer , Integer> mpp = new HashMap<>(); 
+//         for(int i = 0 ; i < n ; i++){
+//             mpp.put(inorder[i] , i); 
+//         }
+//         idx = n-1 ; 
+//         return createTree(postorder , 0 , n-1 , mpp); 
+//     }
+// }

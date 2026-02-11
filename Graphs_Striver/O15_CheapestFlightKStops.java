@@ -54,3 +54,65 @@
 //         return minCost[dst] == Integer.MAX_VALUE ? -1 : minCost[dst];
 //     }
 // }
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
+
+public class O15_CheapestFlightKStops {
+
+    public class Pair implements Comparable<Pair>{
+        int node; 
+        int stops ; 
+        int cost ; 
+        Pair(int node , int stops , int cost){
+            this.node = node; 
+            this.stops = stops ; 
+            this.cost = cost; 
+        }
+        public int compareTo(Pair other){
+            return this.cost - other.cost; 
+        }
+    }
+    public int CheapestFLight(int n, int flights[][], int src, int dst, int k) {
+        Queue<Pair> pq = new LinkedList<>(); 
+        List<List<Pair>> adj = new ArrayList<>(); 
+        for(int i = 0 ; i < n ; i++){
+            adj.add(new ArrayList<>());
+        }
+        pq.offer(new Pair(src , 0 , 0)); 
+        
+        for(int flight[] : flights){
+            int sr = flight[0];
+            int des = flight[1]; 
+            int cost = flight[2]; 
+            adj.get(sr).add(new Pair(des , 0 , cost)); 
+        }
+        int dist[] = new int[n];
+        Arrays.fill(dist , Integer.MAX_VALUE); 
+        dist[src] = 0 ; 
+        
+        while(!pq.isEmpty()){
+            Pair curr = pq.poll();
+            int currNode = curr.node ;
+            int currStops = curr.stops;
+            int currCost = curr.cost; 
+            
+            if(currStops > k) continue; 
+            
+            for(Pair neigh : adj.get(currNode)){
+                int adjNode = neigh.node;
+                int adjCost = neigh.cost; 
+                
+                if(currCost + adjCost < dist[adjNode]){
+                    dist[adjNode] = currCost + adjCost ; 
+                    pq.offer(new Pair(adjNode , currStops + 1 , dist[adjNode])); 
+                }
+            }
+        }
+        if(dist[dst] == Integer.MAX_VALUE) return -1; 
+        return dist[dst]; 
+    }
+}

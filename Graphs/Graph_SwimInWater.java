@@ -3,9 +3,7 @@ import java.util.PriorityQueue;
 
 public class Graph_SwimInWater {
     public class Pair implements Comparable<Pair> {
-        int row;
-        int col;
-        int val;
+        int row, col, val;
 
         Pair(int row, int col, int val) {
             this.row = row;
@@ -22,11 +20,12 @@ public class Graph_SwimInWater {
         int n = grid.length;
         PriorityQueue<Pair> pq = new PriorityQueue<>();
         pq.offer(new Pair(0, 0, grid[0][0]));
-        int visited[][] = new int[n][n];
-        visited[0][0] = 1;
 
-        int delRow[] = { -1, 0, 1, 0 };
-        int delCol[] = { 0, -1, 0, 1 };
+        boolean[][] visited = new boolean[n][n];
+        visited[0][0] = true;
+
+        int[] delRow = {-1, 0, 1, 0};
+        int[] delCol = {0, -1, 0, 1};
 
         int res = 0;
 
@@ -35,15 +34,21 @@ public class Graph_SwimInWater {
             int row = curr.row;
             int col = curr.col;
             int val = curr.val;
+
+            res = Math.max(res, val);
+
             if (row == n - 1 && col == n - 1)
                 return res;
-            res = Math.max(res, val);
 
             for (int i = 0; i < 4; i++) {
                 int newRow = row + delRow[i];
                 int newCol = col + delCol[i];
-                if (newRow >= 0 && newRow < n && newCol >= 0 && newCol < n && visited[newRow][newCol] == 0) {
-                    visited[newRow][newCol] = 1;
+
+                if (newRow >= 0 && newRow < n &&
+                    newCol >= 0 && newCol < n &&
+                    !visited[newRow][newCol]) {
+
+                    visited[newRow][newCol] = true;
                     pq.offer(new Pair(newRow, newCol, grid[newRow][newCol]));
                 }
             }
