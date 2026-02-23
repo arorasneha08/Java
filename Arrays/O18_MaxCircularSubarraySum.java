@@ -1,40 +1,19 @@
 package Arrays ; 
 
 public class O18_MaxCircularSubarraySum {
-    private int totalSum(int arr[]){
-        int n  = arr.length; 
-        int sum = 0 ; 
-        for(int i = 0 ; i<n ; i++){
-            sum += arr[i];
+    public int maxSubarraySumCircular(int[] arr) {
+        int currMax = 0 , currMin = 0 ; 
+        int maxSum = arr[0] , minSum = arr[0]; 
+        int total = 0 ;
+        for(int num : arr){
+            currMax = Math.max(currMax + num , num); 
+            maxSum = Math.max(currMax , maxSum); 
+            currMin = Math.min(currMin + num , num); 
+            minSum = Math.min(minSum , currMin); 
+            total += num; 
         }
-        return sum ; 
-    }
-    private int maxSubarraySum(int arr[]){
-        int n = arr.length ; 
-        int sum = 0 , maxSum = Integer.MIN_VALUE; 
-        for(int i = 0 ; i<n ; i++){
-            sum = Math.max(arr[i], arr[i] + sum); 
-            maxSum = Math.max(maxSum, sum) ; 
-        }
-        return maxSum ; 
-    }
-    private int minSubarraySum(int arr[]){
-        int n = arr.length ; 
-        int sum = 0 , minSum = Integer.MAX_VALUE; 
-        for(int i = 0 ; i<n ; i++){
-            sum = Math.min(arr[i], sum + arr[i]); 
-            minSum = Math.min(minSum, sum) ; 
-        }
-        return minSum ; 
-    }
-    public int maxCircularSum(int nums[]){
-        int totalSum = totalSum(nums); 
-        int maxSum = maxSubarraySum(nums);
-        int minSum = minSubarraySum(nums);
-        int circularSum = totalSum - minSum ; 
-        // for array of all duplicates [-1,-1,-1]
-        if(maxSum > 0){
-            return Math.max(maxSum, circularSum) ; 
+        if(maxSum > 0){ // in case of array wiht all negative numbers 
+            return Math.max(maxSum, total - minSum);
         }
         return maxSum ; 
     }

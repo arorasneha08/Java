@@ -1,4 +1,17 @@
+import java.util.ArrayList;
+
 public class O19_CheckIfSubtree {
+    class Node {
+        int data;
+        Node left;
+        Node right;
+
+        Node(int data) {
+            this.data = data;
+            left = null;
+            right = null;
+        }
+    }
     private static boolean check(Node t1 , Node t2){
         if(t1 == null && t2 == null) return true; 
         if(t1 == null || t2 == null) return false; 
