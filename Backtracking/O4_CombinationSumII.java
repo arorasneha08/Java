@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class O4_CombinationSumII {
+    // combination sum 2 
     private void func(int index , int arr[] , int target , List<Integer> list , List<List<Integer>> res, int sum
     , int visited[]){
         if(sum == target){
@@ -25,6 +26,37 @@ public class O4_CombinationSumII {
             sum -= arr[i]; 
         }
     }
+    //* Combination sum 1  */
+    class Solution {
+    private static void func(int idx, int sum, int arr[], int target,
+                             ArrayList<ArrayList<Integer>> res,
+                             ArrayList<Integer> list) {
+
+        if(sum == target){
+            res.add(new ArrayList<>(list));
+            return;
+        }
+
+        if(sum > target) return;
+
+        for(int i = idx; i < arr.length; i++){
+
+            list.add(arr[i]);
+
+            func(i, sum + arr[i], arr, target, res, list);
+
+            list.remove(list.size() - 1);
+        }
+    }
+
+    public ArrayList<ArrayList<Integer>> targetSumComb(int[] arr, int target) {
+        Arrays.sort(arr);
+        ArrayList<ArrayList<Integer>> res = new ArrayList<>();
+        ArrayList<Integer> list = new ArrayList<>();
+        func(0, 0, arr, target, res, list);
+        return res;
+    }
+}
     public List<List<Integer>> combinationSum2(int[] arr, int target) {
         int n = arr.length; 
         List<List<Integer>> res = new ArrayList<>(); 

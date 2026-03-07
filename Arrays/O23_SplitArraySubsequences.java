@@ -37,7 +37,6 @@ public class O23_SplitArraySubsequences {
                 tails.put(end, tails.getOrDefault(end, 0) + 1);
             }
         }
-
         return true;
     }
 

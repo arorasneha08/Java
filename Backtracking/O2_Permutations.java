@@ -10,6 +10,16 @@ public class O2_Permutations {
         }
         for(int i = 0 ; i < n ; i++){
             if(i > 0 && arr[i] == arr[i-1] && visited[i-1] == 0) continue; 
+
+            /**
+             * arr = [1,1,2] 
+             * visited = [0,0,0]
+             * Without the condition, permutations like this appear:
+                [1(0),1(1),2]
+                [1(1),1(0),2]
+                These are the same permutation but generated from different indices.We want only one.
+             *  visited[i-1] == 0 means:the previous duplicate element has NOT been used in the current permutation path.
+             */
             if(visited[i] == 1) continue; 
             list.add(arr[i]); 
             visited[i] = 1 ; 
