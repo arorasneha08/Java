@@ -1,37 +1,37 @@
 package Backtracking;
 
 public class O9_SudokuSolver {
-    public boolean valid(char board[][] , int row , int col){
-        char ch = board[row][col]; 
-
+    private boolean isValid(int r , int c , int val , char board[][]){
         for(int i = 0 ; i < 9 ; i++){
-            if(i != row && board[i][col] == ch) return false; 
-            if(i != col && board[row][i] == ch) return false; 
+            if(board[r][i] == val) return false; 
+            if(board[i][c] == val) return false; 
         }
-        int startRow = (row / 3) * 3 ;
-        int startCol = (col / 3) * 3 ;
-
-        for(int i = startRow ; i < startRow + 3 ; i ++){
-            for(int j = startCol ; j < startCol + 3 ; j ++){
-                if((i != row || j != col) && board[i][j] == ch) {
-                    return false ; 
-                }
+        int startRow = (r / 3) * 3 ; 
+        int startCol = (c / 3) * 3 ; 
+        for(int i = startRow ; i < startRow + 3 ; i++){
+            for(int j = startCol ; j < startCol + 3 ; j++){
+                if(board[i][j] == val) return false ;
             }
         }
-        return true ; 
+        return true; 
     }
     private boolean solve(char board[][]){
-        for(int i = 0 ; i < 9 ; i ++){
-            for(int j = 0 ; j < 9 ; j++){
+        int n = board.length ; 
+        int m = board[0].length ; 
+
+        for(int i = 0 ; i< n ; i++){
+            for(int j = 0 ; j < m ; j++){
                 if(board[i][j] == '.'){
                     for(char ch = '1' ; ch <= '9' ; ch ++){
-                        board[i][j] = ch ; 
-                        if(valid(board , i , j) && solve(board)){
-                            return true; 
+                        if(isValid(i , j , ch , board)){
+                            board[i][j] = ch ; 
+
+                            if(solve(board)) return true; 
+
+                            board[i][j] = '.'; 
                         }
-                        board[i][j] = '.'; 
                     }
-                    return false; 
+                    return false ; 
                 }
             }
         }

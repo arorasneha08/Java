@@ -13,7 +13,6 @@ public class O12_SubsetSum {
         func(idx + 1 , sum , arr , list); 
     }
     public static ArrayList<Integer> subsetSum(int arr[]) {
-        int n = arr.length ;
         ArrayList<Integer> list = new ArrayList<>();  
         func(0 , 0 , arr , list); 
         Collections.sort(list); 
