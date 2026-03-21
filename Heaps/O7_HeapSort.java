@@ -1,49 +1,34 @@
 public class O7_HeapSort {
-    static class MaxHeap {
-        int[] arr;
-        int heap_size;
-
-        MaxHeap(int[] input) {
-            arr = input;
-            heap_size = arr.length;
+    public void heapify(int arr[] , int i , int n){
+        int left = 2 * i + 1 ; 
+        int right = 2 * i + 2; 
+        int largest = i; 
+        
+        if(left < n && arr[left] > arr[largest]){
+            largest = left; 
         }
-
-        void buildHeap() {
-            for (int i = (heap_size - 2) / 2; i >= 0; i--) {
-                heapify(i);
-            }
+        if(right < n  && arr[right] > arr[largest]){
+            largest = right; 
         }
-
-        void heapify(int i) {
-            int left = 2 * i + 1;
-            int right = 2 * i + 2;
-            int largest = i;
-
-            if (left < heap_size && arr[left] > arr[largest]) largest = left;
-            if (right < heap_size && arr[right] > arr[largest]) largest = right;
-
-            if (largest != i) {
-                int temp = arr[i];
-                arr[i] = arr[largest];
-                arr[largest] = temp;
-                heapify(largest);
-            }
-        }
-
-        void sort() {
-            buildHeap();
-            for (int i = arr.length - 1; i > 0; i--) {
-                int temp = arr[0];
-                arr[0] = arr[i];
-                arr[i] = temp;
-                heap_size--;
-                heapify(0);
-            }
+        if(largest != i){
+            int temp = arr[largest]; 
+            arr[largest] = arr[i]; 
+            arr[i] = temp; 
+            
+            heapify(arr , largest , n); 
         }
     }
-
     public void heapSort(int arr[]) {
-        MaxHeap maxHeap = new MaxHeap(arr);
-        maxHeap.sort();
+        int n = arr.length ; 
+        for(int i = n/2 ; i>= 0 ; i--){
+            heapify(arr , i , n); 
+        }
+        for(int i = n-1; i >= 0 ; i--){
+            int temp = arr[0]; 
+            arr[0] = arr[i]; 
+            arr[i] = temp ;  
+            
+            heapify(arr , 0 , i); 
+        }
     }
 }
