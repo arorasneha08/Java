@@ -4,7 +4,6 @@ public class O11_MinimumPathSum {
     private int func(int i , int j , int grid[][] , int dp[][], int n , int m ){
         if(i == 0 && j == 0) return grid[i][j];
         if(i < 0 || j < 0 || i >= n || j >= m) return Integer.MAX_VALUE; 
-        int min = Integer.MAX_VALUE ;
         
         if(dp[i][j] != -1) return dp[i][j] ; 
 

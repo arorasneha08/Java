@@ -107,3 +107,15 @@
 
 // mirroring in chocolated - if odd then add the extra one and even ones will nullify each other
 // put the stones and pull one or two stones :- n %3 == 0
+
+
+// string matching algorithms 
+
+// polynomial hashing :- O(m + n)
+
+
+// for the problem :- customising the track 
+// sum % n  = r 
+// r * (n-r) 
+
+// divide and multiply 

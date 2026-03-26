@@ -10,7 +10,7 @@ public class DP_MinScoreTriangulationPolygon {
         int res = Integer.MAX_VALUE;
 
         for (int k = i + 1; k < j; k++) {
-            res = Math.min( res, func(i, k, arr, dp) + arr[i] * arr[j] * arr[k] + func(k, j, arr, dp));
+            res = Math.min(res, func(i, k, arr, dp) + arr[i] * arr[j] * arr[k] + func(k, j, arr, dp));
         }
 
         return dp[i][j] = res;
