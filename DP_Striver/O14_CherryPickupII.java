@@ -15,7 +15,7 @@ public class O14_CherryPickupII {
         }
         if(dp[i][j1][j2] != -1) return dp[i][j1][j2]; 
         int max = Integer.MIN_VALUE ;
-        for(int rob1 = -1 ; rob1 <=1  ; rob1 ++){
+        for(int rob1 = -1 ; rob1 <= 1  ; rob1 ++){
             for(int rob2 = -1 ; rob2 <= 1 ; rob2 ++){
                 int val = 0 ;  
                 if(j1 == j2){
