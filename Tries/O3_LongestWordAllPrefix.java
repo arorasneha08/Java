@@ -55,7 +55,6 @@ public class O3_LongestWordAllPrefix {
         
     }
     public String longestValidWord(String[] words) {
-        int n = words.length ; 
         Trie t = new Trie(); 
         for(String word : words){
             t.insert(word); 

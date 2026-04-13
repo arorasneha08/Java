@@ -70,7 +70,6 @@ public class O6_MaxXorWithElementArray {
     }
     public int[] maximizeXor(int[] nums, int[][] queries) {
         int res[] = new int[queries.length]; 
-        int n = nums.length ; 
         Trie t = new Trie(); 
         Arrays.sort(nums); 
 

@@ -5,7 +5,7 @@ class O22_PalindromeLength3 {
 
     public int countPalindromicSubsequence(String s) {
         int n = s.length() ; 
-        HashSet<Character> set = new HashSet();
+        HashSet<Character> set = new HashSet<>();
         for(Character ch : s.toCharArray()){
             set.add(ch); 
         }

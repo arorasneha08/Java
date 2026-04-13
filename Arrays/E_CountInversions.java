@@ -3,7 +3,7 @@ package Arrays;
 import java.util.ArrayList;
 import java.util.List;
 
-public class O16_CountInversions {
+public class E_CountInversions {
     private static int merge(int arr[] , int low , int mid , int high){
         List<Integer> list = new ArrayList<>(); 
         int left = low ; 

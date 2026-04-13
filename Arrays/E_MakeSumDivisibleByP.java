@@ -1,7 +1,7 @@
 package Arrays ; 
 import java.util.HashMap;
 
-public class O26_MakeSumDivisibleByP{
+public class E_MakeSumDivisibleByP{
     public int minSubarray(int[] arr , int p) {
         int n = arr.length ; 
         long total = 0 ; 
@@ -16,7 +16,7 @@ public class O26_MakeSumDivisibleByP{
         mpp.put(0 , -1); 
 
         for(int i = 0 ; i < n ; i++){
-            pref = (pref + arr[i])% p ; 
+            pref = (pref + arr[i]) % p ; 
             int target = (int)(pref - need + p) % p ;
             if(mpp.containsKey(target)){
                 min = Math.min(min , i - mpp.get(target)); 

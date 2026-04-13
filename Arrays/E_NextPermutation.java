@@ -1,6 +1,6 @@
 package Arrays;
 
-public class O7_NextPermutation {
+public class E_NextPermutation {
     private void reverse(int arr[] , int left , int right){
         while(left <= right){
             int temp = arr[left]; 

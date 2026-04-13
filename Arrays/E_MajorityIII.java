@@ -3,7 +3,7 @@ package Arrays;
 import java.util.ArrayList;
 import java.util.List;
 
-public class O13_MajorityIII {
+public class E_MajorityIII {
     public List<Integer> majorityElement(int[] arr) {
         int n = arr.length; 
         List<Integer> res = new ArrayList<>();

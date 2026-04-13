@@ -1,6 +1,6 @@
 package Arrays;
 
-public class O11_IncreasingTripletSubsequence {
+public class E_IncreasingTripletSubsequence {
     public boolean increasingTriplet(int[] arr) {
         int n = arr.length ; 
         if(n == 1 || n == 2) return false; 

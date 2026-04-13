@@ -2,7 +2,7 @@ package Arrays;
 
 import java.util.HashMap;
 
-public class O21_DegreeOfArray {
+public class E_DegreeOfArray {
     public int findShortestSubArray(int[] arr) {
         int n = arr.length ; 
         HashMap<Integer , Integer> freq = new HashMap<>();

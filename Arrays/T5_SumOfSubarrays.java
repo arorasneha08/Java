@@ -1,6 +1,6 @@
 package Arrays;
 
-public class O17_SumOfSubarrays {
+public class T5_SumOfSubarrays {
     public int subarraySum(int[] arr) {
         int n = arr.length ; 
         int sum = 0 ; 

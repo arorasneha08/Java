@@ -2,7 +2,7 @@ package Arrays;
 
 import java.util.Arrays;
 
-public class O3_SubarrayPairs {
+public class T2_SubarrayPairs {
     int countPairs(int[] arr) {
         int n = arr.length ; 
         int count = 0 ; 

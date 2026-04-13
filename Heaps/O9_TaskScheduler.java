@@ -6,7 +6,7 @@ import java.util.PriorityQueue;
 
 public class O9_TaskScheduler {
     public int leastInterval(char[] tasks, int n) {
-        int len = tasks.length ;
+        // int len = tasks.length ;
         HashMap<Character , Integer> mpp = new HashMap<>(); 
         PriorityQueue<Integer> pq = new PriorityQueue<>(Collections.reverseOrder());
         for(char ch : tasks){

@@ -1,6 +1,6 @@
 package Arrays ; 
 
-public class O18_MaxCircularSubarraySum {
+public class T6_MaxCircularSubarraySum {
     public int maxSubarraySumCircular(int[] arr) {
         int currMax = 0 , currMin = 0 ; 
         int maxSum = arr[0] , minSum = arr[0]; 
@@ -12,7 +12,7 @@ public class O18_MaxCircularSubarraySum {
             minSum = Math.min(minSum , currMin); 
             total += num; 
         }
-        if(maxSum > 0){ // in case of array wiht all negative numbers 
+        if(maxSum > 0){ // in case of array with all negative numbers 
             return Math.max(maxSum, total - minSum);
         }
         return maxSum ; 

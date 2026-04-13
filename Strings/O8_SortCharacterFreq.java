@@ -17,7 +17,7 @@ public class O8_SortCharacterFreq {
         }
     }
     public String frequencySort(String s) {
-        int n = s.length(); 
+        // int n = s.length(); 
         HashMap<Character , Integer> mpp = new HashMap<>(); 
         for(char ch : s.toCharArray()){
             mpp.put(ch , mpp.getOrDefault(ch , 0) + 1); 

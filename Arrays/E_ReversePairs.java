@@ -3,7 +3,7 @@ package Arrays;
 import java.util.ArrayList;
 import java.util.List;
 
-public class O5_ReversePairs {
+public class E_ReversePairs {
     private int mergeSort(int left , int right , int arr[]){
         if(left >= right) return 0 ; 
         int count = 0 ; 

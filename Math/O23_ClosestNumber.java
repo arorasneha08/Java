@@ -1,6 +1,6 @@
 public class O23_ClosestNumber{
     static int closestNumber(int n, int m) {
-        int rem =n % m; 
+        // int rem =n % m; 
         if(n % m == 0) return n ; 
         int m1 = Math.abs(m) ; 
         int r = n % m1;

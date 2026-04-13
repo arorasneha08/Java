@@ -2,7 +2,6 @@ package Strings;
 
 public class O14_MinAddParantheseValid {
     public int minParentheses(String s) {
-        int n = s.length();
         int open = 0 ;
         int close = 0;
         

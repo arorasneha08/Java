@@ -1,6 +1,6 @@
 package Arrays;
 
-public class O24_MinOperationsIncrementSubarray {
+public class E_MinOperationsIncrementSubarray {
     public int minNumberOperations(int[] arr) {
         int n = arr.length;
         int op = arr[0]; 

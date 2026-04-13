@@ -2,7 +2,7 @@ package Arrays;
 
 import java.util.Arrays;
 
-public class O22_MinIncrementArrayUnique {
+public class E_MinIncrementArrayUnique {
     public int minIncrementForUnique(int[] arr) {
         int n = arr.length ; 
         Arrays.sort(arr); 

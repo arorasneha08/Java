@@ -7,7 +7,6 @@ public class O18_ValidateIPAddress {
         return 0 ; 
     }
     private String checkIPv6(String str){
-        int n = str.length(); 
         String parts[] = str.split("\\:", -1); 
         String res = "Neither"; 
         if(parts.length != 8) return res; 
@@ -24,7 +23,6 @@ public class O18_ValidateIPAddress {
         return "IPv6"; 
     }
     private String checkIPv4(String str){
-        int n = str.length(); 
         String parts[] = str.split("\\.", -1);
         String res = "Neither";
         if(parts.length != 4) return res ; 

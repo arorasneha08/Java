@@ -1,6 +1,6 @@
 package Arrays;
 
-public class O6_RotateImage {
+public class E_RotateImage {
     public void rotate(int[][] arr) {
         int n = arr.length ; 
 
@@ -18,6 +18,5 @@ public class O6_RotateImage {
                 arr[i][n-j-1] = temp ; 
             }
         }
-
     }
 }

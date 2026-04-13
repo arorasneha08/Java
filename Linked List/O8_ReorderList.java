@@ -31,7 +31,7 @@ public class O8_ReorderList {
         ListNode rev = reverse(nextNode); 
         ListNode t1 = head ; 
         ListNode t2 = rev; 
-        ListNode temp = head; 
+        // ListNode temp = head; 
         while(t1 != null && t2 != null){
             ListNode first = t1.next ; 
             ListNode second = t2.next; 

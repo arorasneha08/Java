@@ -7,7 +7,7 @@ import java.util.Queue;
 public class O7_EventualSafeStates {
     public List<Integer> eventualSafeNodes(int[][] graph) {
         int n = graph.length; 
-        List<Integer> res = new ArrayList<>(); 
+        // List<Integer> res = new ArrayList<>(); 
         List<Integer> topo = new ArrayList<>(); 
         List<List<Integer>> adj = new ArrayList<>();
 

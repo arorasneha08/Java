@@ -2,7 +2,7 @@ package Arrays;
 
 import java.util.HashMap;
 
-public class O14_SubarrayXorK {
+public class E_SubarrayXorK {
     public long subarrayXor(int arr[], int k) {
         int n = arr.length ; 
         int xor = 0 ; 

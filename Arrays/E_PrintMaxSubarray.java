@@ -2,7 +2,7 @@ package Arrays;
 
 import java.util.ArrayList;
 
-public class O9_PrintMaxSubarray {
+public class E_PrintMaxSubarray {
     public ArrayList<Integer> findSubarray(int arr[]) {
         int n = arr.length;
         int ansStart = -1, ansEnd = -1;
