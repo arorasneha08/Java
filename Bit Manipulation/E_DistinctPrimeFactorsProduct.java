@@ -1,6 +1,6 @@
 import java.util.HashSet;
 
-public class O8_PrimeFactorsOfNum {
+public class E_DistinctPrimeFactorsProduct {
     private boolean isPrime(int n){
         if(n <= 1) return false;
         for(int i = 2; i * i <= n ; i++){

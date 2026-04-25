@@ -1,4 +1,4 @@
-public class O3_XorFromLeftToRight {
+public class T1_XorFromLeftToRight {
     private static int func(int n){
         if(n % 4 == 0) return n ; 
         else if(n % 4 == 1) return 1 ; 

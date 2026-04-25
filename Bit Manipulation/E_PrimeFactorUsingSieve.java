@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class O6_PrimeFactorUsingSieve {
+public class E_PrimeFactorUsingSieve {
     static List<Integer> findPrimeFactors(int N) {
         List<Integer> res = new ArrayList<>();
         int primes[] = new int[N+1] ;

@@ -1,4 +1,4 @@
-public class O5_SieveOfErathrotheses {
+public class E_SieveOfErathrotheses {
     public int countPrimes(int n) {
         int primes[] = new int[n];
         if(n <= 2) return 0 ; 

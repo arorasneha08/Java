@@ -1,4 +1,4 @@
-public class O1_PowerOfTwo {
+public class E_PowerOfTwo {
     public boolean isPowerOfTwo(int n) {
         if(n <= 0) return false; 
         int val = n & (n-1) ;

@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class O4_FindTwoOddNum {
+public class T2_FindTwoOddNum {
     ArrayList<Integer> twoOddNum(int[] arr) {
         int n = arr.length ; 
         ArrayList<Integer> res = new ArrayList<>(); 

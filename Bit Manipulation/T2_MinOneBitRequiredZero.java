@@ -1,4 +1,4 @@
-public class O10_MinOneBitRequiredZero {
+public class T2_MinOneBitRequiredZero {
     public int minimumOneBitOperations(int n) {
         int ans = 0;
         while (n > 0) {

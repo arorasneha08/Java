@@ -3,7 +3,6 @@ import java.util.List;
 public class O11_MaxAndValue {
 
     public int maxAND(List<Integer> arr) {
-        int n = arr.size();
         int res = 0 ; 
         
         for(int bit = 31 ; bit >= 0 ; bit --){
