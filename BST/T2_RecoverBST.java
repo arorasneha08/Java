@@ -1,4 +1,4 @@
-public class O2_RecoverBST {
+public class T2_RecoverBST {
     public class TreeNode {
         int val;
         TreeNode left;

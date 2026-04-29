@@ -1,4 +1,4 @@
-public class O6_DeleteBST {
+public class T3_DeleteBST {
     public class TreeNode {
         int val;
         TreeNode left;

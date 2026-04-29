@@ -1,5 +1,4 @@
-
-public class ConvertBSTfromSortedArray {
+public class E_ConvertBSTfromSortedArray {
     public class TreeNode {
         int val;
         TreeNode left;

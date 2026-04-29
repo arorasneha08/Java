@@ -1,4 +1,4 @@
-public class O4_InsertBST {
+public class E_InsertBST {
     public class TreeNode {
         int val;
         TreeNode left;

@@ -1,4 +1,4 @@
-public class O3_KthSmallest {
+public class E_KthSmallest {
     int count = 0 ; 
     int res = 0 ; 
     public class TreeNode {

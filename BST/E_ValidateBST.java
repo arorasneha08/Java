@@ -1,4 +1,4 @@
-class O1_ValidateBST {
+class E_ValidateBST {
     public class TreeNode {
         int val;
         TreeNode left;
