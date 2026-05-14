@@ -3,6 +3,30 @@ package Strings;
 import java.util.Stack;
 
 public class O1_ValidParanthesisString {
+    public boolean checkValidString2(String s) {
+        int n = s.length(); 
+        int minopen = 0 ; 
+        int maxopen = 0 ; 
+        for(int i = 0 ; i < n ; i++){
+            char ch = s.charAt(i) ;
+            if(ch == '('){
+                minopen ++; 
+                maxopen ++;
+            }
+            else if(ch == ')'){
+                minopen -- ;
+                maxopen --; 
+            }
+            else{
+                minopen --; 
+                maxopen ++; 
+            }
+            if(maxopen < 0) return false ;
+            if(minopen < 0) minopen = 0 ; 
+        }
+        if(minopen == 0) return true ;
+        return false ;
+    }
     public boolean checkValidString(String s) {
         int n = s.length(); 
         Stack<Integer> st = new Stack<>(); 

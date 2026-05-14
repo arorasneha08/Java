@@ -31,11 +31,11 @@ public class DP_AllSubsetXorSum {
     /**
      * sum of xor of all subsets :- 
      * now for xor , total ans = sum of contribution of each bit summed up 
-     * take or of all the elements - if atlesast one element as the bit , it will contribute to 2 ^ n-1 cases 
+     * take or of all the elements - if atleast one element as the bit , it will contribute to 2 ^ n-1 cases 
      * Half subsets → even count → XOR = 0
      * Half subsets → odd count → XOR = 1
      * 
-     * If the bit exists :- or * ( 2 ^ n-1)
+     * If the bit exists :- or * (2 ^ n-1)
      */
     int subsetXORSum2(int arr[]) {
         int n = arr.length ; 

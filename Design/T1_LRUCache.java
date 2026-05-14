@@ -1,6 +1,6 @@
 import java.util.HashMap;
 
-public class LRUCaches {
+public class T1_LRUCache {
     class Node {
         Node next;
         Node prev;
